@@ -263,8 +263,7 @@ color: #4767c1;
                  <button class="fonte">Poliana</button>
                  <button class="fonte">Victor</button>
 
-                <h2 class="dia">quinta - feira 19/05/2023</h2>
-                </div>
+                <h2 class="dia" id="time"></div>
             
             <div class="colunamas">
 
@@ -292,10 +291,16 @@ color: #4767c1;
 
 <script type="text/javascript">
 
+var timeDisplay = document.getElementById("time");
 
 
+function refreshTime() {
+  var dateString = new Date().toLocaleString("pt-Br", {timeZone: "America/Sao_Paulo"});
+  var formattedString = dateString.replace(", ", " ");
+  timeDisplay.innerHTML = formattedString;
+}
 
-
+setInterval(refreshTime, 1000); 
     
 </script>
 
