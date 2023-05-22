@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8"/>
+<title>Document</title>
+</head>
+<body>
+<style type="text/css">
+
+html, body
+{
+width: 98%;
+height: 98%;
+}
+
+body
+{
+display: flex;
+align-items: center;
+justify-content: center;
+background-image:url(img/je.jpg);
+background-repeat: no-repeat;
+background-size: 110%;
+}
+
+.teste1
+{
+display: flex;
+justify-content: center;
+width: 360px;
+font-size: 15px;
+font-weight: 60px;
+background-color: #2eaf5f00;
+border-radius: 40px;
+height: 270px;
+padding: 20px;
+color: black;
+position: absolute;
+flex-direction: column;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+}
+
+.teste2
+{
+display: flex;
+justify-content: center;
+padding: 50px;
+}
+
+
+.ouro 
+{
+display: flex;
+}
+
+button {
+  font-size: 18px;
+  font-weight: 600;
+  background-color:#859c8f8a;
+  border-radius: 20px;
+  border: 0;
+  padding: 10px 150px;
+  cursor: pointer;
+}
+
+.hr{
+    display: flex;
+    justify-content: center;
+}
+
+</style>
+
+<div class="teste1">
+
+<div class="hr">
+<h1>LOGIN</h1>
+</div>
+<input id="Usuario_input" type="text"placeholder="👤Usuário"=>
+<br>
+<input id="Senha_input" type="password" placeholder="🔒Senha"=>
+<br>
+<form>
+    <select name="plataforma" required="required">
+        <option value="">Escolha sua turma</option>
+        <option value="xbox">AIT-DDS-2</option>
+        <option value="ps5">Outras...</option>
+    </select>
+</form>
+
+<br> 
+
+<div class="button">
+	
+<button onclick="Teste()">Login</button>
+</div>
+</div>
+
+</body>
+
+
+<script type="text/JavaScript">
+    function Teste() 
+        {
+            var a = document.getElementById("Usuario_input").value;
+            var b = document.getElementById("Senha_input").value;
+    
+            if ( a == "senai" & b == "aluno" ) 
+            {
+            window.location.href = "banheiro.html";
+            }
+            else 
+            {
+            alert("Senha ou usuário incorreto.");
+            }
+    
+        }
+    
+    </script>
+
+</html>
